@@ -1,32 +1,32 @@
-// AddPostForm.js
+// AddBookForm.js
 
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
 
-import { postAdded } from './postsSlice';
+import { bookAdded } from './booksSlice';
 
-export const AddPostForm = () => {
+export const AddBookForm = () => {
   const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
+  const [author, setAuthor] = useState('');
 
   const dispatch = useDispatch();
 
   const onTitleChanged = (e) => setTitle(e.target.value);
-  const onContentChanged =(e) => setContent(e.target.value);
+  const onAuthorChanged =(e) => setAuthor(e.target.value);
 
   const onSavePostClicked = () => {
-    if (title && content) {
+    if (title && author) {
       dispatch(
-        postAdded({
+        bookAdded({
           id: nanoid(),
           title,
-          content,
+          author,
         })
       );
 
       setTitle('');
-      setContent('');
+      setAuthor('');
     }
   }
 
@@ -34,7 +34,7 @@ export const AddPostForm = () => {
     <section>
       <h2>Add a new post</h2>
       <form>
-        <label htmlFor="postTitle">PostTitle:</label>
+        <label htmlFor="postTitle">Title:</label>
         <input
           type="text"
           id="postTitle"
@@ -42,12 +42,12 @@ export const AddPostForm = () => {
           value={title}
           onChange={onTitleChanged}
         />
-        <label htmlFor="postContent">Content:</label>
+        <label htmlFor="bookAuthor">Author:</label>
         <textarea
-          id="postContent"
-          name="postContent"
-          value={content}
-          onChange={onContentChanged}
+          id="bookAuthor"
+          name="bookAuthor"
+          value={author}
+          onChange={onAuthorChanged}
         />
         <button type="button" onClick={onSavePostClicked}>
             Save post
