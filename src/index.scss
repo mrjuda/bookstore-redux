@@ -1,32 +1,32 @@
 // index.scss
 
 * {
-  margin: 0.2rem !important;
-  padding: 0 !important;
+  margin: 0 !important;
+  padding: 0;
   color: #222 !important;
   list-style-type: none;
   text-decoration: none;
 }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif !important;
-  -webkit-font-smoothing: antialiased !important;
-  -moz-osx-font-smoothing: grayscale !important;
+.App,
+.WebHeader {
+  margin: 0.7rem !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace !important;
+ul {
+  padding: 0;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #444;
 }
 
+.book {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.4rem 0 !important;
+}
 
 button {
   background: #ddd !important;

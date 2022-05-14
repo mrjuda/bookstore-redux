@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 
 import { Navbar } from './app/Navbar';
-import { BooksList } from './features/books/BooksList';
-import { AddBookForm } from './features/books/AddBookForm';
+import { BooksList } from './redux/books/BooksList';
+import { AddBookForm } from './redux/books/AddBookForm';
 
 function App() {
   return (
@@ -20,17 +20,17 @@ function App() {
             exact
             path="/"
             render={() => (
-              <React.Fragment>
+              <>
                 <BooksList />
                 <AddBookForm />
-              </React.Fragment>
+              </>
             )}
           />
           <Redirect to="/" />
         </Switch>
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
