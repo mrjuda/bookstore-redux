@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,EAAE,CAAC;EACD,MAAM,EAAE,MAAM;EACd,OAAO,EAAE,CAAC;CACX;;AAED,AAAA,eAAe,CAAC;EACd,MAAM,EAAE,CAAC;CACV",
+    "sources": [
+        "BookContainer.scss"
+    ],
+    "names": [],
+    "file": "BookContainer.css"
+}

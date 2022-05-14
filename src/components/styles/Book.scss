@@ -1,0 +1,27 @@
+// Book.scss
+
+.book-div {
+  margin: 0;
+}
+
+.book-container {
+  border: solid #ccc 0.1rem;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0.1rem solid #ddd;
+
+  .title {
+    padding: 0;
+  }
+}
+
+.book:nth-child(2n+1) {
+  background-color: #f6f6f6;
+}
