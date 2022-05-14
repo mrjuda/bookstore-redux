@@ -11,7 +11,7 @@ export const BooksList = () => {
     <li className="book" key={book.id}>
       <div>
         <span>{book.title}</span>
-        <span>-</span>
+        <span> - </span>
         <span className="book-author">{book.author.substring(0, 100)}</span>
       </div>
       <button type="button">remove</button>
