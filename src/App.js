@@ -20,17 +20,17 @@ function App() {
             exact
             path="/"
             render={() => (
-              <React.Fragment>
+              <>
                 <BooksList />
                 <AddBookForm />
-              </React.Fragment>
+              </>
             )}
           />
           <Redirect to="/" />
         </Switch>
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
