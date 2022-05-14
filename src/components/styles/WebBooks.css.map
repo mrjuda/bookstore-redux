@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAC;EACJ,UAAU,EAAE,IAAI;CAKjB;;AAND,AAGE,KAHG,CAGH,CAAC,CAAC;EACA,MAAM,EAAE,CAAC;CACV",
+    "sources": [
+        "WebBooks.scss"
+    ],
+    "names": [],
+    "file": "WebBooks.css"
+}

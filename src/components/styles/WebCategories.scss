@@ -1,0 +1,12 @@
+// WebCategories.scss
+
+.cat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.quote {
+  font-size: 1.4rem;
+}

@@ -1,3 +1,5 @@
+// index.scss
+
 * {
   margin: 0.2rem !important;
   padding: 0 !important;
@@ -8,19 +10,23 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace !important;
 }
 
 h1 {
   font-size: 2rem;
   color: #444;
 }
+
 
 button {
   background: #ddd !important;
@@ -38,4 +44,3 @@ button:active {
   background-color: #bbb !important;
   font-weight: 700 !important;
 }
-/*# sourceMappingURL=index.css.map */
