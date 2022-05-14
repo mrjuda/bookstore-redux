@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 
 import { Navbar } from './app/Navbar';
-import { BooksList } from './features/posts/BooksList';
-import { AddBookForm } from './features/posts/AddBookForm';
+import { BooksList } from './features/books/BooksList';
+import { AddBookForm } from './features/books/AddBookForm';
 
 function App() {
   return (
