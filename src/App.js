@@ -21,8 +21,8 @@ function App() {
             path="/"
             render={() => (
               <React.Fragment>
-                <AddBookForm />
                 <BooksList />
+                <AddBookForm />
               </React.Fragment>
             )}
           />

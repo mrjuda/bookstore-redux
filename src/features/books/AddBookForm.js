@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
+// import '../../index.css';
+import './styles/AddBookForm.css';
 
 import { bookAdded } from './booksSlice';
 
@@ -32,7 +34,6 @@ export const AddBookForm = () => {
 
   return (
     <section>
-      <h2>Add a new post</h2>
       <form>
         <label htmlFor="postTitle">Title:</label>
         <input
@@ -50,7 +51,7 @@ export const AddBookForm = () => {
           onChange={onAuthorChanged}
         />
         <button type="button" onClick={onSavePostClicked}>
-            Save post
+            Add book
         </button>
       </form>
     </section>

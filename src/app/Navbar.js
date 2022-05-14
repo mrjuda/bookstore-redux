@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
+import '../index.css';
 
 export const Navbar = () => {
   return (
-    <nav>
-      <section>
-        <h1>Bookstore (redux version)</h1>
-
-        <div className="navContent">
-          <div className="navLinks"></div>
-        </div>
-      </section>
-    </nav>
+    <div className="WebHeader">
+      <h1 className="HeaderTitle">
+        Bookstore (redux version)
+      </h1>
+      <div className="navContent">
+        <div className="navLinks"></div>
+      </div>
+    </div>
   )
 }
