@@ -1,8 +1,14 @@
 * {
-  margin: 0.2rem !important;
+  margin: 0 !important;
+  padding: 0;
   color: #222 !important;
   list-style-type: none;
   text-decoration: none;
+}
+
+.App,
+.WebHeader {
+  margin: 0.7rem !important;
 }
 
 ul {
@@ -12,6 +18,16 @@ ul {
 h1 {
   font-size: 1.8rem;
   color: #444;
+}
+
+.book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.4rem 0 !important;
 }
 
 button {

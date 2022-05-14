@@ -8,7 +8,7 @@ const initialState = [
   { id: '3', title: 'Mininos Sabidos', author: 'Judá Teixeira' },
 ];
 const booksSlice = createSlice({
-  name: 'posts',
+  name: 'books',
   initialState,
   reducers: {
     bookAdded(state, action) {

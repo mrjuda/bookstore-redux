@@ -2,15 +2,18 @@
 
 import React from 'react';
 import { useSelector } from 'react-redux';
+import './styles/BooksList.css';
 
 export const BooksList = () => {
   const books = useSelector((state) => state.books);
 
   const renderedBooks = books.map((book) => (
     <li className="book" key={book.id}>
-      <span>{book.title}</span>
-      <span> - </span>
-      <span className="book-author">{book.author.substring(0, 100)}</span>
+      <div>
+        <span>{book.title}</span>
+        <span>-</span>
+        <span className="book-author">{book.author.substring(0, 100)}</span>
+      </div>
       <button type="button">remove</button>
     </li>
   ));

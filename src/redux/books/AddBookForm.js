@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-// import '../../index.css';
 import './styles/AddBookForm.css';
 
 import { bookAdded } from './booksSlice';
@@ -17,7 +16,7 @@ export const AddBookForm = () => {
   const onTitleChanged = (e) => setTitle(e.target.value);
   const onAuthorChanged = (e) => setAuthor(e.target.value);
 
-  const onSavePostClicked = () => {
+  const onSaveBookClicked = () => {
     if (title && author) {
       dispatch(
         bookAdded({
@@ -38,8 +37,8 @@ export const AddBookForm = () => {
         type="text"
         className="add-book-text"
         placeholder="Add a Title"
-        id="postTitle"
-        name="postTitle"
+        id="bookTitle"
+        name="bookTitle"
         value={title}
         onChange={onTitleChanged}
       />
@@ -52,8 +51,8 @@ export const AddBookForm = () => {
         value={author}
         onChange={onAuthorChanged}
       />
-      <button type="button" onClick={onSavePostClicked}>
-        Add
+      <button type="button" onClick={onSaveBookClicked}>
+        Add New
       </button>
     </form>
   );
