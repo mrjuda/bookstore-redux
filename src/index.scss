@@ -2,15 +2,23 @@
 
 * {
   margin: 0.2rem !important;
-  padding: 0 !important;
+  // padding: 0.2rem !important;
   color: #222 !important;
   list-style-type: none;
   text-decoration: none;
 }
 
+ul {
+  padding: 0;
+}
+
 h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #444;
+}
+
+input {
+  padding: 0.4rem !important;
 }
 
 button {

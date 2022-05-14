@@ -35,16 +35,19 @@ export const AddBookForm = () => {
   return (
     <section>
       <form>
-        <label htmlFor="postTitle">Title:</label>
         <input
           type="text"
+          className="add-book-text"
+          placeholder="Add a Title"
           id="postTitle"
           name="postTitle"
           value={title}
           onChange={onTitleChanged}
         />
-        <label htmlFor="bookAuthor">Author:</label>
-        <textarea
+        <input
+          type="text"
+          className="add-book-text"
+          placeholder="Add an Author"
           id="bookAuthor"
           name="bookAuthor"
           value={author}

@@ -1,18 +1,19 @@
 // BooksList.js
 
-import React from "react";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 export const BooksList = () => {
-  const books = useSelector(state => state.books);
+  const books = useSelector((state) => state.books);
 
-  const renderedBooks = books.map(book => (
+  const renderedBooks = books.map((book) => (
     <li className="book" key={book.id}>
       <span>{book.title}</span>
-      <span className="book-author">({book.author.substring(0, 100)})</span>
+      <span> - </span>
+      <span className="book-author">{book.author.substring(0, 100)}</span>
       <button type="button">remove</button>
     </li>
-  ))
+  ));
 
   return (
     <section className="WebPage">
@@ -32,3 +33,5 @@ export const BooksList = () => {
     </section>
   );
 };
+
+export default BooksList;
