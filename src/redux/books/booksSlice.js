@@ -1,9 +1,7 @@
 // booksSlice.js
 
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { nanoid } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, nanoid } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { response } from 'msw';
 
 const booksUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
 const unqApiId = '2YsQBoyJACtUVArcysuh/books/';
@@ -39,8 +37,6 @@ export const deleteBook = createAsyncThunk('books/deleteBook', async ({ id }) =>
     .catch((error) => console.log(error));
   return { id };
 });
-
-
 
 export const booksSlice = createSlice({
   name: 'book',

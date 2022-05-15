@@ -28,13 +28,11 @@ export const AddBookForm = () => {
             author,
           }),
         );
-  
         setTitle('');
         setAuthor('');
       } catch (error) {
         console.error('Error adding book', error);
       }
-      
     }
   };
 
