@@ -14,11 +14,9 @@ const booksSlice = createSlice({
       state.push(action.payload);
     },
     bookRemoved(state, action) {
-      console.log(state.books);
       const index = state.findIndex((book) => book.id === action.payload);
-      console.log(index);
       state.splice(index, 1);
-    }
+    },
   },
 });
 

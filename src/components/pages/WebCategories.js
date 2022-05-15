@@ -12,7 +12,7 @@ export const WebCategories = () => {
     dispatch(checkStatus({}));
   }
 
-  const status = useSelector((state) => state.categories.value);
+  // const status = useSelector((state) => state.categories.value);
 
   return (
     <div className="cat-container">
@@ -20,7 +20,9 @@ export const WebCategories = () => {
         type="button"
         className="check-status"
         onClick={callStatus}
-      >Check Status</button>
+      >
+        Check Status
+      </button>
       <p className="quote">
         If you only read the books that everyone else is reading,
         you can only think what everyone else is thinking.
@@ -28,6 +30,6 @@ export const WebCategories = () => {
       </p>
     </div>
   );
-}
+};
 
 export default WebCategories;
