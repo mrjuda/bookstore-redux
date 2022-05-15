@@ -1,6 +1,10 @@
 // booksSlice.js
 
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+
+const booksUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
+const unqApiId = '2YsQBoyJACtUVArcysuh';
 
 const booksSlice = createSlice({
   name: 'books',
