@@ -2,22 +2,19 @@
 
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { bookRemoved } from './booksSlice';
-import './styles/BooksList.css';
+import { deleteBook } from './booksSlice';
 
 export const BooksList = () => {
   const dispatch = useDispatch();
 
   const onRemoveBookClicked = (id) => {
-    dispatch(bookRemoved(id));
+    dispatch(deleteBook(id));
   };
-  const books = useSelector((state) => state.books);
-  // console.log(books);
+  const books = useSelector((state) => state.books.value);
 
   return (
     <section className="WebPage">
       <ul className="book-container">
-        {/* {renderedBooks} */}
         {books.map((book) => (
           <li className="book" key={book.id}>
             <div>
