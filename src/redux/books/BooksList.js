@@ -2,36 +2,39 @@
 
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { bookRemoved } from './booksSlice';
 import './styles/BooksList.css';
 
 export const BooksList = () => {
-  const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
 
-  const renderedBooks = books.map((book) => (
+  const onRemoveBookClicked = (id) => {
+    dispatch(bookRemoved(id));
+  }
+  const books = useSelector((state) => state.books);
+  // console.log(books);
+
+  return (
+    <section className="WebPage">
+      <ul className="book-container">
+        {/* {renderedBooks} */}
+        {books.map((book) => (
     <li className="book" key={book.id}>
       <div>
         <span>{book.title}</span>
         <span> - </span>
         <span className="book-author">{book.author.substring(0, 100)}</span>
       </div>
-      <button type="button">remove</button>
+      <button
+        type="button"
+        id={book.id}
+        onClick={() => { onRemoveBookClicked(book.id) }}
+      >
+        remove
+      </button>
     </li>
-  ));
-
-  return (
-    <section className="WebPage">
-      <h2 className="HeaderTitle">
-        Welcome to the Bookstore!
-      </h2>
-      <div className="text">
-        <p>
-          A room without books is like a body without a soul.
-          ― Marcus Tullius Cicero
-        </p>
-        <br />
-      </div>
-      <ul className="book-container">
-        {renderedBooks}
+  ))}
       </ul>
     </section>
   );
