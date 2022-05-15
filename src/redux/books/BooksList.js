@@ -12,7 +12,7 @@ export const BooksList = () => {
     dispatch(deleteBook(id));
   };
   const books = useSelector((state) => state.books.value);
-  
+
   return (
     <section className="WebPage">
       <ul className="book-container">
