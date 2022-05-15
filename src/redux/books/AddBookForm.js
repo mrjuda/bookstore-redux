@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
 import './styles/AddBookForm.css';
 
-import { bookAdded } from './booksSlice';
+import { addNewBook } from './booksSlice';
 
 export const AddBookForm = () => {
   const [title, setTitle] = useState('');
@@ -16,18 +16,25 @@ export const AddBookForm = () => {
   const onTitleChanged = (e) => setTitle(e.target.value);
   const onAuthorChanged = (e) => setAuthor(e.target.value);
 
-  const onSaveBookClicked = () => {
-    if (title && author) {
-      dispatch(
-        bookAdded({
-          id: nanoid(),
-          title,
-          author,
-        }),
-      );
+  const canSave = [title, author].every(Boolean);
 
-      setTitle('');
-      setAuthor('');
+  const onSaveBookClicked = () => {
+    if (canSave) {
+      try {
+        dispatch(
+          addNewBook({
+            id: nanoid(),
+            title,
+            author,
+          }),
+        );
+  
+        setTitle('');
+        setAuthor('');
+      } catch (error) {
+        console.error('Error adding book', error);
+      }
+      
     }
   };
 

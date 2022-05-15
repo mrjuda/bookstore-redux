@@ -2,17 +2,17 @@
 
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { bookRemoved } from './booksSlice';
+import { deleteBook } from './booksSlice';
 import './styles/BooksList.css';
 
 export const BooksList = () => {
   const dispatch = useDispatch();
 
   const onRemoveBookClicked = (id) => {
-    dispatch(bookRemoved(id));
+    dispatch(deleteBook(id));
   };
-  const books = useSelector((state) => state.books);
-  // console.log(books);
+  const books = useSelector((state) => state.books.value);
+  console.log(books);
 
   return (
     <section className="WebPage">
