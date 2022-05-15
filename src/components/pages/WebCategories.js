@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
 import { checkStatus } from '../../redux/categories/categoriesSlice';
 
 export const WebCategories = () => {
@@ -10,7 +9,7 @@ export const WebCategories = () => {
 
   const callStatus = () => {
     dispatch(checkStatus({}));
-  }
+  };
 
   // const status = useSelector((state) => state.categories.value);
 
