@@ -3,7 +3,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteBook } from './booksSlice';
-import './styles/BooksList.css';
 
 export const BooksList = () => {
   const dispatch = useDispatch();
@@ -16,7 +15,6 @@ export const BooksList = () => {
   return (
     <section className="WebPage">
       <ul className="book-container">
-        {/* {renderedBooks} */}
         {books.map((book) => (
           <li className="book" key={book.id}>
             <div>

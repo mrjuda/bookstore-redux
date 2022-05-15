@@ -2,6 +2,7 @@
 
 import { createSlice, createAsyncThunk, nanoid } from '@reduxjs/toolkit';
 import axios from 'axios';
+import '../../index.css';
 
 const booksUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
 const unqApiId = '2YsQBoyJACtUVArcysuh/books/';
