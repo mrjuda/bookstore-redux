@@ -38,6 +38,7 @@ export const AddBookForm = () => {
 
   return (
     <div className="add-book-container">
+      <span className="splitter"></span>
       <h2>ADD NEW BOOK</h2>
       <form className="add-book-form">
         <input
