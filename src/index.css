@@ -11,7 +11,7 @@
 #root {
   width: 100%;
   margin: 0;
-  padding: 3rem;
+  padding: 2rem 7vw;
   background-color: #f5f6fa;
 }
 
@@ -29,10 +29,9 @@
 .add-book-container {
   border-radius: 6px 6px 0 0;
   margin: 0.5rem 0;
-  padding: 0 4rem;
+  padding: 1rem 7vw;
 }
 
-/* Navbar */
 .WebHeader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,7 +44,9 @@
           align-items: center;
 }
 
+.WebHeader .HeaderTitle,
 .WebHeader h1 {
+  margin: 0.5rem;
   width: 15rem;
   font-family: Montserrat, sans-serif;
   font-size: 1.7rem;
@@ -57,19 +58,20 @@
   color: #0290ff;
 }
 
+.WebHeader .HeaderMenu,
 .WebHeader ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 0.5rem;
+  margin: 0.5rem 0;
 }
 
+.WebHeader .HeaderMenu .MenuItem,
 .WebHeader ul .MenuItem {
   text-decoration: none;
   color: #666;
@@ -80,7 +82,8 @@
   letter-spacing: 0.12rem;
 }
 
-.WebHeader ul li a {
+.WebHeader .HeaderMenu .MenuItem a,
+.WebHeader ul .MenuItem a {
   color: inherit;
 }
 
@@ -160,7 +163,6 @@
 .book .book-data .book-author {
   margin: 0;
   padding: 0;
-  opacity: 0.5;
   font-family: Roboto Slab, Montserrat, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -171,6 +173,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 0.5rem;
   color: #bbb;
 }
@@ -236,10 +240,12 @@
 .add-book-container .add-book-form .add-title,
 .add-book-container .add-book-form .add-author {
   margin: 0;
+  padding: 0.4rem;
   border: solid #ccc 0.1rem;
   border-radius: 0.2rem;
-  background-color: #eee;
+  background-color: #fff;
   font-family: Montserrat, sans-serif;
+  color: #888;
   font-size: 1rem;
 }
 
