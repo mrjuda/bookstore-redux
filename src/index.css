@@ -44,8 +44,7 @@
           align-items: center;
 }
 
-.WebHeader .HeaderTitle,
-.WebHeader h1 {
+.WebHeader .HeaderTitle {
   margin: 0.5rem;
   width: 15rem;
   font-family: Montserrat, sans-serif;
@@ -58,8 +57,7 @@
   color: #0290ff;
 }
 
-.WebHeader .HeaderMenu,
-.WebHeader ul {
+.WebHeader .HeaderMenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,8 +69,7 @@
   margin: 0.5rem 0;
 }
 
-.WebHeader .HeaderMenu .MenuItem,
-.WebHeader ul .MenuItem {
+.WebHeader .HeaderMenu .MenuItem {
   text-decoration: none;
   color: #666;
   margin: 0;
@@ -82,8 +79,7 @@
   letter-spacing: 0.12rem;
 }
 
-.WebHeader .HeaderMenu .MenuItem a,
-.WebHeader ul .MenuItem a {
+.WebHeader .HeaderMenu .MenuItem a {
   color: inherit;
 }
 
@@ -258,10 +254,6 @@
   width: 100%;
   font-weight: bold;
   color: #fff;
-  cursor: pointer;
-}
-
-.add-book-container .add-book-form button:hover {
   cursor: pointer;
 }
 
