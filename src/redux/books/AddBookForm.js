@@ -37,29 +37,32 @@ export const AddBookForm = () => {
   };
 
   return (
-    <form className="add-book-container">
-      <input
-        type="text"
-        className="add-book-text"
-        placeholder="Add a Title"
-        id="bookTitle"
-        name="bookTitle"
-        value={title}
-        onChange={onTitleChanged}
-      />
-      <input
-        type="text"
-        className="add-book-text"
-        placeholder="Add an Author"
-        id="bookAuthor"
-        name="bookAuthor"
-        value={author}
-        onChange={onAuthorChanged}
-      />
-      <button type="button" onClick={onSaveBookClicked}>
-        Add New
-      </button>
-    </form>
+    <div className="add-book-container">
+      <h3>Add new book</h3>
+      <form className="add-book-form">
+        <input
+          type="text"
+          className="add-book-text"
+          placeholder="Add a Title"
+          id="bookTitle"
+          name="bookTitle"
+          value={title}
+          onChange={onTitleChanged}
+        />
+        <input
+          type="text"
+          className="add-book-text"
+          placeholder="Add an Author"
+          id="bookAuthor"
+          name="bookAuthor"
+          value={author}
+          onChange={onAuthorChanged}
+        />
+        <button type="button" onClick={onSaveBookClicked}>
+          Add New
+        </button>
+      </form>
+    </div>
   );
 };
 

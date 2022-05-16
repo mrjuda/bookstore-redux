@@ -8,21 +8,26 @@
 }
 
 #root {
-  width: 100rem;
-  height: 89.625rem;
-  padding: 9.313rem 3.75rem 7.688rem 6.25rem;
+  width: 100%;
+  margin: 0;
+  padding: 3rem;
   background-color: #f5f6fa;
 }
 
 .container {
-  width: 87.5rem;
-  height: 68.563rem;
-  margin: 0 2.5rem 4.063rem 0;
-  padding: 0 0 49.625rem;
+  margin: 0;
+  padding: 0;
   border-radius: 4px;
   -webkit-box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
           box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
   background-color: #fafafa;
+}
+
+.WebHeader,
+.WebPage,
+.add-book-container {
+  margin: 0.5rem 0;
+  padding: 0 4rem;
 }
 
 /* Navbar */
@@ -30,19 +35,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  height: 5.938rem;
-  margin: 0 0 2.375rem;
-  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .WebHeader h1 {
   width: 15rem;
-  height: 2.313rem;
-  margin: 0.375rem 2.938rem 0.125rem 0;
   font-family: Montserrat, sans-serif;
-  font-size: 1.875rem;
+  font-size: 1.7rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -58,12 +60,17 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0.5rem;
 }
 
 .WebHeader ul li a {
   width: 3.688rem;
   height: 1rem;
-  margin: 1.125rem 2.563rem 0.688rem 0;
+  margin: 0;
+  padding: 0 0.5rem;
   font-family: Montserrat, sans-serif;
   font-size: 0.813rem;
   font-weight: normal;
@@ -75,8 +82,7 @@
   color: black;
 }
 
-.WebPage,
-.add-book-container {
+.WebPage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,6 +90,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -100,6 +107,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .book {
@@ -113,10 +123,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 75rem;
-  height: 10.625rem;
-  margin: 2.313rem 6.25rem 0;
-  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  width: 100%;
+  margin: 0.2rem;
+  padding: 0.2rem;
   border-radius: 4px;
   background-color: #fff;
   border: solid 1px #e8e8e8;
@@ -125,7 +134,6 @@
 }
 
 .book p {
-  height: 1.125rem;
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
   font-family: Montserrat, sans-serif;
@@ -154,30 +162,27 @@ button:active {
   font-weight: 700;
 }
 
-.add-book-container {
+.add-book-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
   gap: 0.6rem;
-  margin: 1rem 0;
-  padding: 0;
 }
 
-.add-book-container .add-book-text {
+.add-book-form .add-book-text {
   width: 100%;
   margin: 0;
   border: solid #ccc 0.1rem;
   border-radius: 0.2rem;
   background-color: #eee;
-}
-
-.add-book-container button {
-  margin: 0;
-  background-color: #222;
-  min-width: 6rem;
 }
 
 /* books */
@@ -186,10 +191,6 @@ button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -218,8 +219,6 @@ button:active {
 }
 
 .form input {
-  height: 2.813rem;
-  width: 30rem;
   margin: 1.188rem 2.125rem 0 0;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
@@ -234,12 +233,9 @@ button:active {
 }
 
 .form button {
-  width: 11.5rem;
-  height: 2.813rem;
-  margin: 1.188rem 0 0 2.125rem;
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border-radius: 3px;
-  background-color: #0290ff;
+  background-color: #fff;
   font-family: RobotoSlab, sans-serif;
   font-size: 0.813rem;
   font-weight: bold;

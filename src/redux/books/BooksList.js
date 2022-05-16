@@ -17,10 +17,9 @@ export const BooksList = () => {
       <ul className="book-container">
         {books.map((book) => (
           <li className="book" key={book.id}>
-            <div>
-              <span>{book.title}</span>
-              <span> - </span>
-              <span className="book-author">{book.author.substring(0, 100)}</span>
+            <div className="book-data">
+              <h3>{book.title}</h3>
+              <p className="book-author">{book.author.substring(0, 100)}</p>
             </div>
             <button
               type="button"
