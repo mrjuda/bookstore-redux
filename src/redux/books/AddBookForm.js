@@ -38,11 +38,11 @@ export const AddBookForm = () => {
 
   return (
     <div className="add-book-container">
-      <h3>Add new book</h3>
+      <h2>ADD NEW BOOK</h2>
       <form className="add-book-form">
         <input
           type="text"
-          className="add-book-text"
+          className="add-title"
           placeholder="Add a Title"
           id="bookTitle"
           name="bookTitle"
@@ -51,7 +51,7 @@ export const AddBookForm = () => {
         />
         <input
           type="text"
-          className="add-book-text"
+          className="add-author"
           placeholder="Add an Author"
           id="bookAuthor"
           name="bookAuthor"
@@ -59,7 +59,7 @@ export const AddBookForm = () => {
           onChange={onAuthorChanged}
         />
         <button type="button" onClick={onSaveBookClicked}>
-          Add New
+          ADD NEW
         </button>
       </form>
     </div>

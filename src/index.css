@@ -200,7 +200,25 @@
   border: none;
 }
 
-.add-book-form {
+.add-book-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.add-book-container h2 {
+  margin: 0.5rem 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #888;
+}
+
+.add-book-container .add-book-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,84 +229,37 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
-  gap: 0.6rem;
+  padding-bottom: 1rem;
+  gap: 0.4rem;
 }
 
-.add-book-form .add-book-text {
-  width: 100%;
+.add-book-container .add-book-form .add-title,
+.add-book-container .add-book-form .add-author {
   margin: 0;
   border: solid #ccc 0.1rem;
   border-radius: 0.2rem;
   background-color: #eee;
-}
-
-.add-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.add-form h2 {
-  height: 1.5rem;
-  margin: 1.813rem 32.75rem 1.188rem 0;
-  font-family: Montserrat, sans-serif;
-  font-size: 1.25rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.18px;
-  color: #888;
-}
-
-.form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.form input {
-  margin: 1.188rem 2.125rem 0 0;
-  border-radius: 4px;
-  border: solid 1px #e8e8e8;
-  background-color: #fff;
   font-family: Montserrat, sans-serif;
   font-size: 1rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.15px;
 }
 
-.form button {
-  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+.add-book-container .add-book-form button {
+  padding: 0;
+  margin: 0;
   border-radius: 3px;
-  background-color: #fff;
-  font-family: Roboto Slab, sans-serif;
-  font-size: 0.813rem;
+  font-family: Roboto Slab, Montserrat, sans-serif;
+  font-size: 0.8rem;
+  width: 100%;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 0.5px;
   color: #fff;
-}
-
-.book-list button:hover {
   cursor: pointer;
 }
 
-.form button:hover {
+.add-book-container .add-book-form button:hover {
   cursor: pointer;
 }
 
-/* Add form */
+.add-book-container .add-book-form button:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=index.css.map */
