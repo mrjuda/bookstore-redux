@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,15 +18,16 @@
 .container {
   margin: 0;
   padding: 0;
-  border-radius: 4px;
+  border-radius: 10px;
   -webkit-box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
           box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-  background-color: #fafafa;
+  background-color: #f8f8f8;
 }
 
 .WebHeader,
 .WebPage,
 .add-book-container {
+  border-radius: 6px 6px 0 0;
   margin: 0.5rem 0;
   padding: 0 4rem;
 }
@@ -35,6 +37,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: white;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -66,20 +70,18 @@
   margin: 0 0.5rem;
 }
 
-.WebHeader ul li a {
-  width: 3.688rem;
-  height: 1rem;
+.WebHeader ul .MenuItem {
+  text-decoration: none;
+  color: #666;
   margin: 0;
   padding: 0 0.5rem;
   font-family: Montserrat, sans-serif;
-  font-size: 0.813rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.9px;
-  text-decoration: none;
-  color: black;
+  font-size: 0.8rem;
+  letter-spacing: 0.12rem;
+}
+
+.WebHeader ul li a {
+  color: inherit;
 }
 
 .WebPage {
@@ -124,42 +126,78 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  margin: 0.2rem;
-  padding: 0.2rem;
+  margin: 0.6rem;
+  padding: 1rem 1.4rem;
   border-radius: 4px;
   background-color: #fff;
   border: solid 1px #e8e8e8;
-  -webkit-box-shadow: 1px 1px;
-          box-shadow: 1px 1px;
 }
 
-.book p {
-  margin: 0 2.438rem 0 0;
-  opacity: 0.5;
+.book .book-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 0;
+}
+
+.book .book-data .book-category {
   font-family: Montserrat, sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
+  color: #888;
 }
 
-button {
-  background: #ddd;
+.book .book-data .book-title {
+  font-family: Roboto Slab, Montserrat, sans-serif;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.book .book-data .book-author {
+  margin: 0;
+  padding: 0;
+  opacity: 0.5;
+  font-family: Roboto Slab, Montserrat, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.book .btn-array {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  color: #bbb;
+}
+
+.book .btn-array button {
+  font-family: Roboto Slab, Montserrat, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #4386bf;
+  background: none;
   border: none;
   border-radius: 0.1rem;
-  padding: 0.5rem;
+  padding: 0;
+  margin: 0;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #ccc;
+.book .btn-array button:hover {
+  background-color: #4386bf;
+  color: #fff;
+  border: none;
 }
 
-button:active {
-  background-color: #bbb;
-  font-weight: 700;
+.book .btn-array button:active {
+  color: #4386bf;
+  background-color: #fff;
+  border: none;
 }
 
 .add-book-form {
@@ -185,8 +223,6 @@ button:active {
   background-color: #eee;
 }
 
-/* books */
-/* Add form */
 .add-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,7 +272,7 @@ button:active {
   padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border-radius: 3px;
   background-color: #fff;
-  font-family: RobotoSlab, sans-serif;
+  font-family: Roboto Slab, sans-serif;
   font-size: 0.813rem;
   font-weight: bold;
   font-stretch: normal;

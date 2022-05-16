@@ -8,8 +8,8 @@ export const Navbar = () => (
       Bookstore CMS
     </h1>
     <ul className="HeaderMenu">
-      <li><a href="/">Books</a></li>
-      <li><a href="/WebCategories">Categories</a></li>
+      <li className="MenuItem"><a href="/">BOOKS</a></li>
+      <li className="MenuItem"><a href="/WebCategories">CATEGORIES</a></li>
     </ul>
   </div>
 );

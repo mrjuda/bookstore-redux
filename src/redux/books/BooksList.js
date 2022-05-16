@@ -18,16 +18,31 @@ export const BooksList = () => {
         {books.map((book) => (
           <li className="book" key={book.id}>
             <div className="book-data">
-              <h3>{book.title}</h3>
+              <span className="book-category">Science Fiction</span>
+              <h3 className="book-title">{book.title}</h3>
               <p className="book-author">{book.author.substring(0, 100)}</p>
             </div>
-            <button
-              type="button"
-              id={book.id}
-              onClick={() => { onRemoveBookClicked(book.id); }}
-            >
-              remove
-            </button>
+            <div className="btn-array">
+              <button
+                type="button"
+              >
+                Comments
+              </button>
+              <span> | </span>
+              <button
+                type="button"
+                id={book.id}
+                onClick={() => { onRemoveBookClicked(book.id); }}
+              >
+                Remove
+              </button>
+              <span> | </span>
+              <button
+                type="button"
+              >
+                Edit
+              </button>
+            </div>
           </li>
         ))}
       </ul>
