@@ -188,18 +188,6 @@
   cursor: pointer;
 }
 
-.book .btn-array button:hover {
-  background-color: #4386bf;
-  color: #fff;
-  border: none;
-}
-
-.book .btn-array button:active {
-  color: #4386bf;
-  background-color: #fff;
-  border: none;
-}
-
 .add-book-container {
   display: -webkit-box;
   display: -ms-flexbox;
