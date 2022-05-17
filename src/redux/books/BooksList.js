@@ -55,7 +55,7 @@ export const BooksList = () => {
               <h4>Chapter 12</h4>
               <button
                 type="button"
-                className="up-progress"
+                className="btn-up-progress"
               >
                 UPDATE PROGRESS
               </button>

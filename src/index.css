@@ -111,6 +111,27 @@
   padding: 0 0.4rem;
 }
 
+.btn-up-progress {
+  font-family: Roboto Slab, Montserrat, sans-serif;
+  margin: 0;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  width: 10rem;
+}
+
+.btn-add-book {
+  padding: 0.1rem;
+  margin: 0;
+  border-radius: 3px;
+  font-family: Roboto Slab, Montserrat, sans-serif;
+  font-size: 0.8rem;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
 .book {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,15 +255,6 @@
   font-weight: 500;
 }
 
-.book .c3 button {
-  font-family: Roboto Slab, Montserrat, sans-serif;
-  margin: 0;
-  padding: 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 300;
-  width: 10rem;
-}
-
 .add-book-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,17 +303,5 @@
   font-family: Montserrat, sans-serif;
   color: #888;
   font-size: 1rem;
-}
-
-.add-book-container .add-book-form button {
-  padding: 0.1rem;
-  margin: 0;
-  border-radius: 3px;
-  font-family: Roboto Slab, Montserrat, sans-serif;
-  font-size: 0.8rem;
-  width: 100%;
-  font-weight: bold;
-  color: #fff;
-  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */

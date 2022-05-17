@@ -59,7 +59,11 @@ export const AddBookForm = () => {
           value={author}
           onChange={onAuthorChanged}
         />
-        <button type="button" onClick={onSaveBookClicked}>
+        <button
+          type="button"
+          className="btn-add-book"
+          onClick={onSaveBookClicked}
+        >
           ADD BOOK
         </button>
       </form>
