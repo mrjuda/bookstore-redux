@@ -81,70 +81,128 @@
 }
 
 .book-container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 100%;
+  // width: 100%;
   margin: 0;
   padding: 0;
 }
 
+.c1,
+.c2,
+.c3 {
+  padding: 0 0.4rem;
+}
+
 .book {
   display: flex;
-  flex-direction: column;
+  gap: 2rem;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
   margin: 0.6rem;
   padding: 1rem 1.4rem;
   border-radius: 4px;
   background-color: #fff;
   border: solid 1px #e8e8e8;
 
-  .book-data {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 0;
+  .c1 {
+    .book-data {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
 
-    .book-category {
-      font-family: Montserrat, sans-serif;
-      font-size: 0.9rem;
-      font-weight: bold;
-      color: #888;
+      .book-category {
+        font-family: Montserrat, sans-serif;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #888;
+      }
+
+      .book-title {
+        font-family: Roboto Slab, Montserrat, sans-serif;
+        font-size: 1.3rem;
+        margin: 0;
+      }
+
+      .book-author {
+        margin: 0;
+        padding: 0;
+        font-family: Roboto Slab, Montserrat, sans-serif;
+        font-size: 1rem;
+        font-weight: 300;
+        color: #4386bf;
+      }
     }
 
-    .book-title {
-      font-family: Roboto Slab, Montserrat, sans-serif;
-      font-size: 1.3rem;
-      margin: 0;
-    }
+    .btn-array {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      color: #bbb;
 
-    .book-author {
-      margin: 0;
-      padding: 0;
-      font-family: Roboto Slab, Montserrat, sans-serif;
-      font-size: 1rem;
-      font-weight: 300;
-      color: #4386bf;
+      button {
+        font-family: Roboto Slab, Montserrat, sans-serif;
+        font-size: 1rem;
+        font-weight: 300;
+        color: #4386bf;
+        background: none;
+        border: none;
+        border-radius: 0.1rem;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+      }
     }
   }
 
-  .btn-array {
+  .c2 {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    color: #bbb;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem;
+
+    img {
+      padding: 0;
+      margin: 0;
+      height: 4rem;
+    }
+  }
+
+  .v-splitter {
+    font-size: 0.2rem;
+    height: 5rem;
+    color: #ccc;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    // opacity: 0.2;
+    // border-radius: 6px 6px 0 0;
+  }
+
+  .c3 {
+    span {
+      font-family: Roboto Slab, Montserrat, sans-serif;
+      color: #666;
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+
+    h4 {
+      font-family: Roboto Slab, Montserrat, sans-serif;
+      margin: 0 0 0.9rem 0;
+      padding: 0.2rem 0;
+      color: #222;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
 
     button {
       font-family: Roboto Slab, Montserrat, sans-serif;
-      font-size: 1rem;
-      font-weight: 300;
-      color: #4386bf;
-      background: none;
-      border: none;
-      border-radius: 0.1rem;
-      padding: 0;
       margin: 0;
-      cursor: pointer;
+      padding: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 300;
+      width: 10rem;
     }
   }
 }
@@ -153,7 +211,7 @@
   display: flex;
   flex-direction: column;
 
-  .splitter {
+  .h-splitter {
     border-top: solid #ddd 1px;
     margin-bottom: 1rem;
   }

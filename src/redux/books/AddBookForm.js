@@ -38,7 +38,7 @@ export const AddBookForm = () => {
 
   return (
     <div className="add-book-container">
-      <span className="splitter" />
+      <span className="h-splitter" />
       <h2>ADD NEW BOOK</h2>
       <form className="add-book-form">
         <input
@@ -60,7 +60,7 @@ export const AddBookForm = () => {
           onChange={onAuthorChanged}
         />
         <button type="button" onClick={onSaveBookClicked}>
-          ADD NEW
+          ADD BOOK
         </button>
       </form>
     </div>

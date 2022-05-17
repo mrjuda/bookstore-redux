@@ -98,33 +98,29 @@
 }
 
 .book-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   margin: 0;
   padding: 0;
+}
+
+.c1,
+.c2,
+.c3 {
+  padding: 0 0.4rem;
 }
 
 .book {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  gap: 2rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
   margin: 0.6rem;
   padding: 1rem 1.4rem;
   border-radius: 4px;
@@ -132,7 +128,7 @@
   border: solid 1px #e8e8e8;
 }
 
-.book .book-data {
+.book .c1 .book-data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,20 +139,20 @@
   margin: 1rem 0;
 }
 
-.book .book-data .book-category {
+.book .c1 .book-data .book-category {
   font-family: Montserrat, sans-serif;
   font-size: 0.9rem;
   font-weight: bold;
   color: #888;
 }
 
-.book .book-data .book-title {
+.book .c1 .book-data .book-title {
   font-family: Roboto Slab, Montserrat, sans-serif;
   font-size: 1.3rem;
   margin: 0;
 }
 
-.book .book-data .book-author {
+.book .c1 .book-data .book-author {
   margin: 0;
   padding: 0;
   font-family: Roboto Slab, Montserrat, sans-serif;
@@ -165,7 +161,7 @@
   color: #4386bf;
 }
 
-.book .btn-array {
+.book .c1 .btn-array {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,7 +171,7 @@
   color: #bbb;
 }
 
-.book .btn-array button {
+.book .c1 .btn-array button {
   font-family: Roboto Slab, Montserrat, sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -188,6 +184,65 @@
   cursor: pointer;
 }
 
+.book .c2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.4rem;
+}
+
+.book .c2 img {
+  padding: 0;
+  margin: 0;
+  height: 4rem;
+}
+
+.book .v-splitter {
+  font-size: 0.2rem;
+  height: 5rem;
+  color: #ccc;
+  background-color: #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.book .c3 span {
+  font-family: Roboto Slab, Montserrat, sans-serif;
+  color: #666;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.book .c3 h4 {
+  font-family: Roboto Slab, Montserrat, sans-serif;
+  margin: 0 0 0.9rem 0;
+  padding: 0.2rem 0;
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.book .c3 button {
+  font-family: Roboto Slab, Montserrat, sans-serif;
+  margin: 0;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  width: 10rem;
+}
+
 .add-book-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -198,7 +253,7 @@
           flex-direction: column;
 }
 
-.add-book-container .splitter {
+.add-book-container .h-splitter {
   border-top: solid #ddd 1px;
   margin-bottom: 1rem;
 }
