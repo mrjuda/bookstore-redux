@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import './styles/AddBookForm.css';
+import '../../index.css';
 
-import { bookAdded } from './booksSlice';
+import { addNewBook } from './booksSlice';
 
 export const AddBookForm = () => {
   const [title, setTitle] = useState('');
@@ -16,45 +16,58 @@ export const AddBookForm = () => {
   const onTitleChanged = (e) => setTitle(e.target.value);
   const onAuthorChanged = (e) => setAuthor(e.target.value);
 
-  const onSaveBookClicked = () => {
-    if (title && author) {
-      dispatch(
-        bookAdded({
-          id: nanoid(),
-          title,
-          author,
-        }),
-      );
+  const canSave = [title, author].every(Boolean);
 
-      setTitle('');
-      setAuthor('');
+  const onSaveBookClicked = () => {
+    if (canSave) {
+      try {
+        dispatch(
+          addNewBook({
+            id: nanoid(),
+            title,
+            author,
+          }),
+        );
+        setTitle('');
+        setAuthor('');
+      } catch (error) {
+        console.error('Error adding book', error);
+      }
     }
   };
 
   return (
-    <form className="add-book-container">
-      <input
-        type="text"
-        className="add-book-text"
-        placeholder="Add a Title"
-        id="bookTitle"
-        name="bookTitle"
-        value={title}
-        onChange={onTitleChanged}
-      />
-      <input
-        type="text"
-        className="add-book-text"
-        placeholder="Add an Author"
-        id="bookAuthor"
-        name="bookAuthor"
-        value={author}
-        onChange={onAuthorChanged}
-      />
-      <button type="button" onClick={onSaveBookClicked}>
-        Add New
-      </button>
-    </form>
+    <div className="add-book-container">
+      <span className="h-splitter" />
+      <h2>ADD NEW BOOK</h2>
+      <form className="add-book-form">
+        <input
+          type="text"
+          className="add-title"
+          placeholder="Add a Title"
+          id="bookTitle"
+          name="bookTitle"
+          value={title}
+          onChange={onTitleChanged}
+        />
+        <input
+          type="text"
+          className="add-author"
+          placeholder="Add an Author"
+          id="bookAuthor"
+          name="bookAuthor"
+          value={author}
+          onChange={onAuthorChanged}
+        />
+        <button
+          type="button"
+          className="btn-add-book"
+          onClick={onSaveBookClicked}
+        >
+          ADD BOOK
+        </button>
+      </form>
+    </div>
   );
 };
 

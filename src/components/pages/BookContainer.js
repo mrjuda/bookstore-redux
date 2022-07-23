@@ -1,7 +1,7 @@
 // BookContainer.js
 
 import React from 'react';
-import '../styles/BookContainer.css';
+// import '../styles/BookContainer.css';
 import Book from './Book';
 
 const BookContainer = () => (

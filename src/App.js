@@ -1,35 +1,36 @@
 import React from 'react';
 import {
+  Routes,
   BrowserRouter as Router,
-  Switch,
   Route,
-  Redirect,
 } from 'react-router-dom';
 
 import { Navbar } from './app/Navbar';
 import { BooksList } from './redux/books/BooksList';
 import { AddBookForm } from './redux/books/AddBookForm';
+import { WebCategories } from './components/pages/WebCategories';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <div className="App">
-        <Switch>
+    <div className="container">
+      <Router>
+        <Navbar />
+        <Routes>
           <Route
             exact
             path="/"
-            render={() => (
+            element={(
               <>
                 <BooksList />
                 <AddBookForm />
               </>
             )}
           />
-          <Redirect to="/" />
-        </Switch>
-      </div>
-    </Router>
+          {/* <Redirect to="/" /> */}
+          <Route path="/WebCategories" element={<WebCategories />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
